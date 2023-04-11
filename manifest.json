@@ -1,0 +1,14 @@
+{
+    "name": "Disable Google Location",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "Web extension to remove displaying your location on Google",
+    "permissions": ["activeTab", "tabs", "storage", "http://*/*", "https://*/*"],
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "all_frames": true,
+            "js": ["src/google.js"]
+        }
+    ]
+}
